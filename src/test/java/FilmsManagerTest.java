@@ -77,11 +77,10 @@ public class FilmsManagerTest {
         manager.addMovie("Тролли.Мировой тур");
         manager.addMovie("Номер один");
 
-        String[] expected = {"Бладшот", "Вперёд", "Отель.Белград", "Джентльмены", "Человек-невидимка", "Тролли.Мировой тур", "Номер один" };
+        String[] expected = {"Бладшот", "Вперёд", "Отель.Белград", "Джентльмены", "Человек-невидимка", "Тролли.Мировой тур", "Номер один"};
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
-
 
 
 }
