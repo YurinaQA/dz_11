@@ -48,8 +48,25 @@ public class FilmsManagerTest {
         String[] actual = manager.findLast();
         Assertions.assertArrayEquals(expected, actual);
     }
+
     @Test
-    public void shouldAddMaxFilms() {
+    public void shouldAddLimitFilms() {
+        FilmsManager manager = new FilmsManager();
+
+        manager.addMovie("Бладшот");
+        manager.addMovie("Вперёд");
+        manager.addMovie("Отель.Белград");
+        manager.addMovie("Джентльмены");
+        manager.addMovie("Человек-невидимка");
+
+        String[] expected = {"Бладшот", "Вперёд", "Отель.Белград", "Джентльмены", "Человек-невидимка"};
+        String[] actual = manager.findAll();
+        Assertions.assertArrayEquals(expected, actual);
+    }
+
+
+    @Test
+    public void moreFilmLimitsShouldBeAdded() {
         FilmsManager manager = new FilmsManager();
 
         manager.addMovie("Бладшот");
@@ -64,5 +81,7 @@ public class FilmsManagerTest {
         String[] actual = manager.findAll();
         Assertions.assertArrayEquals(expected, actual);
     }
+
+
 
 }
